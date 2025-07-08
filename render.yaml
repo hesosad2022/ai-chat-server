@@ -1,0 +1,5 @@
+build:
+  python_version: 3.11
+  install:
+    - pip install -r requirements.txt
+start: python server.py

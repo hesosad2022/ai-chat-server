@@ -11,7 +11,7 @@ app = Flask(__name__)
 CORS(app)  # Enable Cross-Origin Requests
 
 # Get API key from environment variables (NEVER hardcode)
-OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
+OPENROUTER_API_KEY = os.getenv("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")
 
 @app.route("/chat", methods=["POST"])
 def chat():

@@ -24,7 +24,7 @@ def chat():
 
     reply = response.json()["choices"][0]["message"]["content"]
     return jsonify({"reply": reply})
-
+print("server connected "
 if __name__ == "__main__":
     import os
     port = int(os.environ.get("PORT", 10000))

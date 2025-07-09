@@ -89,7 +89,7 @@ if __name__ == "__main__":
     # تشغيل البروكسي TCP على المنافذ المحددة في Threads منفصلة
     for port in PROXY_PORTS:
         threading.Thread(target=start_tcp_proxy_server, args=(port,), daemon=True).start()
+import os
+port = int(os.environ.get("PORT", 10000))
+app.run(host="0.0.0.0", port=port)
 
-    # تشغيل سيرفر Flask على منفذ 8080
-    print("Starting Flask server on port 8080")
-    app.run(host="0.0.0.0", port=8080)
